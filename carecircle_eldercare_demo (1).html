@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareCircle — Eldercare, together</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#20332e;--muted:#71817a;--green:#2f705d;--mint:#e8f2ed;--cream:#f7f8f4;--line:#e7ece7;--orange:#d68a54;--white:#fff;--shadow:0 12px 35px rgba(34,65,53,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:flex;min-height:100vh}.sidebar{width:245px;background:#fff;border-right:1px solid var(--line);padding:28px 18px;position:fixed;inset:0 auto 0 0;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:0 10px 32px;font:800 20px Manrope}.brandmark{width:36px;height:36px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:20px}.navlabel{font-size:10px;letter-spacing:1.6px;color:#9aa69f;font-weight:700;padding:0 12px 12px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;text-align:left;padding:12px 13px;border-radius:11px;color:#6d7c75;font-weight:600;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:var(--mint);color:var(--green)}.nav .ico{width:20px;text-align:center;font-size:17px}.sidebar-bottom{margin-top:auto}.helpbox{background:#f4f7f2;padding:15px;border-radius:14px;font-size:12px;color:var(--muted);line-height:1.5}.helpbox strong{display:block;color:var(--ink);font-size:13px;margin-bottom:5px}.profile{display:flex;align-items:center;gap:10px;padding:18px 8px 0}.avatar{width:36px;height:36px;border-radius:50%;background:#e8d6c4;display:grid;place-items:center;font-weight:700;color:#73533b}.profile small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.main{margin-left:245px;width:calc(100% - 245px);padding:28px 38px 55px;max-width:1600px}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);font-weight:700}.topbar h1{font:800 26px Manrope;margin:6px 0 0}.top-actions{display:flex;align-items:center;gap:12px}.date{font-size:12px;color:var(--muted);background:white;border:1px solid var(--line);padding:10px 13px;border-radius:10px}.btn{border:0;border-radius:10px;padding:11px 15px;background:var(--green);color:#fff;font-weight:700;font-size:12px;box-shadow:0 5px 14px #2f705d22}.btn:hover{background:#255b4b}.btn.light{background:#fff;color:var(--green);border:1px solid #dce7df;box-shadow:none}.btn.small{padding:8px 11px}.welcome{background:#e9f1eb;border-radius:19px;padding:25px 28px;display:flex;justify-content:space-between;align-items:center;position:relative;overflow:hidden;margin-bottom:22px}.welcome:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #d2e3d7;border-radius:50%;right:85px;top:-110px;box-shadow:0 0 0 25px #dcebe1,0 0 0 50px #e2eee5}.welcome h2{font:800 21px Manrope;margin:7px 0}.welcome p{margin:0;color:#667a70;font-size:13px}.welcome .btn{position:relative;z-index:1}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}.stat,.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:17px 18px}.stathead{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.staticon{width:30px;height:30px;border-radius:10px;background:var(--mint);display:grid;place-items:center}.stat strong{display:block;font:800 25px Manrope;margin:12px 0 3px}.stat small{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}.card{padding:20px;margin-bottom:18px}.cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.card h3{font:800 15px Manrope;margin:0}.muted{color:var(--muted);font-size:12px}.event{display:flex;gap:13px;padding:13px 0;border-top:1px solid #f0f2ef;align-items:center}.event:first-of-type{border-top:0}.eventdate{width:46px;height:48px;border-radius:11px;background:#f4f7f2;display:grid;place-items:center;align-content:center;color:var(--green)}.eventdate b{font:800 17px Manrope}.eventdate span{font-size:9px;text-transform:uppercase;font-weight:700}.eventinfo{flex:1}.eventinfo b{font-size:12px;display:block}.eventinfo span{font-size:11px;color:var(--muted);display:block;margin-top:4px}.tag{font-size:10px;font-weight:700;padding:6px 9px;border-radius:20px;background:#edf5ee;color:#3d795c}.tag.orange{background:#fff2e8;color:#b96d35}.med{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid #f0f2ef}.med:first-of-type{border-top:0}.med b{font-size:12px;display:block}.med span{font-size:11px;color:var(--muted)}.check{width:27px;height:27px;border-radius:9px;border:1px solid #dce8df;background:#f6faf6;color:var(--green);font-weight:800}.check.done{background:var(--green);color:#fff}.visit{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid #f0f2ef}.visit .avatar{width:34px;height:34px;background:#dce9e0;color:#42634f;font-size:11px}.visit b{font-size:12px;display:block}.visit span{font-size:11px;color:var(--muted)}.visit .tag{margin-left:auto}.activity{display:grid;gap:14px}.activityrow{display:flex;gap:11px;font-size:11px;color:var(--muted);line-height:1.5}.dot{width:8px;height:8px;background:#76a58b;border-radius:50%;margin-top:4px;flex-shrink:0}.dot.orange{background:var(--orange)}.page{display:none}.page.active{display:block}.pageintro{margin:0 0 20px}.pageintro h2{font:800 21px Manrope;margin:0 0 6px}.pageintro p{color:var(--muted);font-size:13px;margin:0}.toolbar{display:flex;gap:10px;margin-bottom:15px;flex-wrap:wrap}.toolbar input,.toolbar select,.form input,.form select,.form textarea{border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff;color:var(--ink);font-size:12px}.toolbar input{min-width:220px}.table{width:100%;border-collapse:collapse;font-size:12px}.table th{text-align:left;color:#8a9890;font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:12px 10px;border-bottom:1px solid var(--line)}.table td{padding:14px 10px;border-bottom:1px solid #f0f2ef}.table tr:last-child td{border:0}.table strong{font-size:12px}.empty{padding:30px;text-align:center;color:var(--muted);font-size:13px}.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contact{padding:17px}.contact .avatar{margin-bottom:12px}.contact h4{margin:0 0 4px;font-size:13px}.contact p{margin:0;color:var(--muted);font-size:11px;line-height:1.7}.privacy{background:#edf5ee;border:1px solid #dce9df;border-radius:14px;padding:17px;line-height:1.6;color:#587164;font-size:12px}.privacy b{color:var(--ink)}.modalback{position:fixed;inset:0;background:#14231f77;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modalback.show{display:flex}.modal{background:#fff;border-radius:17px;padding:23px;width:min(460px,100%);box-shadow:0 25px 80px #10251d33}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.modalhead h3{margin:0;font:800 17px Manrope}.close{border:0;background:#f1f4f1;border-radius:8px;width:30px;height:30px}.form{display:grid;gap:11px}.form label{font-size:11px;color:var(--muted);font-weight:700;display:grid;gap:5px}.form .btn{margin-top:5px}.toast{position:fixed;bottom:22px;right:22px;background:#203b32;color:white;padding:12px 16px;border-radius:10px;font-size:12px;opacity:0;transform:translateY(8px);transition:.25s;z-index:20}.toast.show{opacity:1;transform:translateY(0)}.mobilehead{display:none}
+@media(max-width:900px){.sidebar{width:70px;padding:20px 9px}.brand{padding:0 7px 28px}.brand span,.navlabel,.nav button .txt,.sidebar-bottom{display:none}.nav button{justify-content:center;padding:13px 8px}.main{margin-left:70px;width:calc(100% - 70px);padding:22px 20px}.stats{grid-template-columns:repeat(2,1fr)}.contactgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.main{padding:18px 13px}.topbar{align-items:flex-start}.topbar h1{font-size:21px}.date{display:none}.welcome{padding:20px}.welcome:after{right:-120px}.welcome .btn{font-size:0}.welcome .btn:after{content:"＋";font-size:17px}.grid{grid-template-columns:1fr}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:21px}.contactgrid{grid-template-columns:1fr}.table{min-width:580px}.tablewrap{overflow:auto}.top-actions{gap:6px}.top-actions .btn{padding:10px}.brand{font-size:0}.brandmark{font-size:20px}.card{padding:15px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brandmark">✳</div><span>CareCircle</span></div>
+  <div class="navlabel">WORKSPACE</div>
+  <nav class="nav">
+    <button class="active" data-page="dashboard"><span class="ico">⌂</span><span class="txt">Overview</span></button>
+    <button data-page="appointments"><span class="ico">▦</span><span class="txt">Appointments</span></button>
+    <button data-page="medications"><span class="ico">✚</span><span class="txt">Medication routine</span></button>
+    <button data-page="visits"><span class="ico">♡</span><span class="txt">Care visits</span></button>
+    <button data-page="contacts"><span class="ico">♧</span><span class="txt">People & contacts</span></button>
+    <button data-page="privacy"><span class="ico">⌑</span><span class="txt">Privacy & access</span></button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="helpbox"><strong>Need a hand?</strong>Care coordination should feel simpler. Reach your family circle whenever you need.</div>
+    <div class="profile"><div class="avatar">DS</div><div><b style="font-size:12px">Debopriya S.</b><small>Family coordinator</small></div></div>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">Family care space · Kolkata</div><h1 id="heading">Good morning, Debopriya</h1></div><div class="top-actions"><div class="date" id="today"></div><button class="btn" onclick="openModal('appointment')">＋ Add update</button></div></header>
+
+<section class="page active" id="dashboard">
+  <div class="welcome"><div><div class="eyebrow">Your family circle</div><h2>Care is better, together.</h2><p>A shared view of the little things that make a big difference.</p></div><button class="btn" onclick="openModal('appointment')">＋ Add an update</button></div>
+  <div class="stats">
+    <div class="stat"><div class="stathead">Upcoming appointments <span class="staticon">▦</span></div><strong id="statAppt">3</strong><small>Next: Cardiology · 10:30 AM</small></div>
+    <div class="stat"><div class="stathead">Today's medication <span class="staticon">✚</span></div><strong id="statMeds">2/3</strong><small>Routines marked complete</small></div>
+    <div class="stat"><div class="stathead">Care visits this week <span class="staticon">♡</span></div><strong>4</strong><small>Next visit · Tomorrow, 4 PM</small></div>
+    <div class="stat"><div class="stathead">Family members <span class="staticon">♧</span></div><strong>4</strong><small>Across 3 different cities</small></div>
+  </div>
+  <div class="grid">
+    <div>
+      <div class="card"><div class="cardhead"><h3>Upcoming appointments</h3><button class="btn light small" onclick="showPage('appointments')">View all →</button></div><div id="dashAppointments"></div></div>
+      <div class="card"><div class="cardhead"><h3>Medication routine</h3><span class="muted">Today · Tap to mark done</span></div><div id="dashMeds"></div></div>
+    </div>
+    <div>
+      <div class="card"><div class="cardhead"><h3>Care visits</h3><button class="btn light small" onclick="showPage('visits')">View all →</button></div>
+        <div class="visit"><div class="avatar">AM</div><div><b>Anita — Home care</b><span>Tomorrow · 4:00 PM</span></div><span class="tag">Confirmed</span></div>
+        <div class="visit"><div class="avatar">RK</div><div><b>Rakesh — Physiotherapy</b><span>Friday · 11:00 AM</span></div><span class="tag">Confirmed</span></div>
+        <div class="visit"><div class="avatar">SM</div><div><b>Sunita — Home care</b><span>Saturday · 10:00 AM</span></div><span class="tag orange">Pending</span></div>
+      </div>
+      <div class="card"><div class="cardhead"><h3>Family activity</h3><span class="muted">Recent updates</span></div><div class="activity">
+        <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Priya</b> added a cardiology appointment.<br>Today, 9:42 AM</span></div>
+        <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Anita</b> confirmed tomorrow's home visit.<br>Yesterday, 5:18 PM</span></div>
+        <div class="activityrow"><span class="dot orange"></span><span><b style="color:var(--ink)">You</b> updated the medication schedule.<br>Yesterday, 11:05 AM</span></div>
+      </div></div>
+      <div class="privacy"><b>🔒 Independence comes first</b><br>CareCircle shares only the information a person chooses to share. Older adults stay in control of who can see their care details.</div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="appointments">
+  <div class="pageintro"><h2>Appointments</h2><p>Keep consultations, follow-ups and transport details in one shared place.</p></div>
+  <div class="toolbar"><input id="apptSearch" placeholder="Search appointments…" oninput="renderAppointments()"><button class="btn" onclick="openModal('appointment')">＋ Add appointment</button></div>
+  <div class="card tablewrap"><table class="table"><thead><tr><th>Appointment</th><th>Date & time</th><th>Location</th><th>Transport</th><th>Status</th></tr></thead><tbody id="apptRows"></tbody></table></div>
+</section>
+<section class="page" id="medications">
+  <div class="pageintro"><h2>Medication routine</h2><p>A simple shared checklist. This demo does not provide medical advice or verify prescriptions.</p></div>
+  <div class="toolbar"><button class="btn" onclick="openModal('medication')">＋ Add medication reminder</button></div>
+  <div class="card"><div class="cardhead"><h3>Today's checklist</h3><span class="muted">Tap the check to update status</span></div><div id="medRows"></div></div>
+  <div class="privacy"><b>Medication safety note</b><br>Only add schedules confirmed by the person's clinician or pharmacist. CareCircle is a coordination tool, not a prescribing or dosing service.</div>
+</section>
+<section class="page" id="visits">
+  <div class="pageintro"><h2>Care visits</h2><p>Coordinate home-care, physiotherapy and other trusted support visits.</p></div>
+  <div class="toolbar"><button class="btn" onclick="openModal('visit')">＋ Schedule a visit</button></div>
+  <div class="card"><div class="cardhead"><h3>Visit schedule</h3><span class="muted">This week</span></div>
+    <div class="visit"><div class="avatar">AM</div><div><b>Anita Mukherjee · Home care</b><span>Tomorrow · 4:00–5:00 PM · Confirmed by provider</span></div><span class="tag">Confirmed</span></div>
+    <div class="visit"><div class="avatar">RK</div><div><b>Rakesh Kumar · Physiotherapy</b><span>Friday · 11:00 AM · Home visit</span></div><span class="tag">Confirmed</span></div>
+    <div class="visit"><div class="avatar">SM</div><div><b>Sunita Mondal · Home care</b><span>Saturday · 10:00 AM · Awaiting confirmation</span></div><span class="tag orange">Pending</span></div>
+  </div>
+</section>
+<section class="page" id="contacts">
+  <div class="pageintro"><h2>People & emergency contacts</h2><p>The trusted circle involved in care coordination.</p></div>
+  <div class="contactgrid">
+    <div class="card contact"><div class="avatar">DS</div><h4>Debopriya Saha</h4><p>Family coordinator<br>Bengaluru · Adult child<br>Can manage appointments</p><span class="tag">Coordinator</span></div>
+    <div class="card contact"><div class="avatar">PS</div><h4>Priya Saha</h4><p>Daughter<br>Kolkata · Family member<br>Can view shared updates</p><span class="tag">Family</span></div>
+    <div class="card contact"><div class="avatar">AS</div><h4>Arun Saha</h4><p>Older adult<br>Kolkata · Care recipient<br>Controls sharing preferences</p><span class="tag">Care recipient</span></div>
+    <div class="card contact"><div class="avatar">AM</div><h4>Anita Mukherjee</h4><p>Home-care professional<br>Kolkata · Verified in this demo<br>Visit coordination only</p><span class="tag">Care provider</span></div>
+    <div class="card contact"><div class="avatar">DR</div><h4>Dr. Sen's Clinic</h4><p>Primary clinic<br>Kolkata · Appointment contact<br>Use verified clinic details</p><span class="tag">Healthcare</span></div>
+    <div class="card contact"><div class="avatar">+</div><h4>Add a trusted person</h4><p>Invite a family member or care professional with the older adult's permission.</p><button class="btn light small" onclick="toast('Invitation flow is a prototype feature.')">＋ Invite person</button></div>
+  </div>
+  <div class="privacy" style="margin-top:5px"><b>Emergency information</b><br>Primary family contact: Priya Saha · Keep locally verified emergency numbers and clinic contacts up to date. For an immediate emergency in India, call 112.</div>
+</section>
+<section class="page" id="privacy">
+  <div class="pageintro"><h2>Privacy & access</h2><p>Trust is built through clear consent, limited access and transparent updates.</p></div>
+  <div class="grid">
+    <div class="card"><div class="cardhead"><h3>Sharing preferences</h3><span class="tag">Demo settings</span></div>
+      <div class="med"><div><b>Appointments</b><span>Share with approved family circle</span></div><input type="checkbox" checked aria-label="Share appointments"></div>
+      <div class="med"><div><b>Medication reminders</b><span>Share reminder status, not medical records</span></div><input type="checkbox" checked aria-label="Share medication reminders"></div>
+      <div class="med"><div><b>Care visit schedule</b><span>Share with approved coordinators</span></div><input type="checkbox" checked aria-label="Share care visit schedule"></div>
+      <div class="med"><div><b>Personal notes</b><span>Private unless explicitly shared</span></div><input type="checkbox" aria-label="Share personal notes"></div>
+      <button class="btn" style="margin-top:15px" onclick="toast('Demo preferences saved on this screen.')">Save preferences</button>
+    </div>
+    <div class="card"><h3 style="margin-bottom:13px">Our privacy principles</h3><div class="activity">
+      <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Consent-led access</b><br>The older adult chooses who joins their circle.</span></div>
+      <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Minimum necessary data</b><br>Share coordination details, not more personal information than needed.</span></div>
+      <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Clear roles</b><br>Family, care providers and coordinators receive different access.</span></div>
+      <div class="activityrow"><span class="dot"></span><span><b style="color:var(--ink)">Visible activity</b><br>Members can review important updates and changes.</span></div>
+    </div></div>
+  </div>
+  <div class="privacy"><b>Prototype disclaimer</b><br>This is a front-end concept with sample data. It does not send alerts, contact providers, store data securely on a server, verify identities, or provide emergency monitoring. A production service needs authentication, encrypted storage, consent records, role-based access, audit logs, secure notifications and a tested emergency escalation process.</div>
+</section>
+</main>
+</div>
+<div class="modalback" id="modalback" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modalhead"><h3 id="modalTitle">Add update</h3><button class="close" onclick="closeModal()">✕</button></div><form class="form" id="entryForm" onsubmit="saveEntry(event)"></form></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const today=new Date();document.getElementById('today').textContent=today.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+let appointments=[
+{name:'Cardiology follow-up',date:'2026-11-07',time:'10:30 AM',place:'Sen Clinic, Kolkata',transport:'Family pickup',status:'Confirmed'},
+{name:'Routine health check',date:'2026-11-10',time:'12:00 PM',place:'City Medical Centre',transport:'Cab required',status:'To arrange'},
+{name:'Eye specialist',date:'2026-11-14',time:'04:00 PM',place:'Vision Care Clinic',transport:'Family pickup',status:'Confirmed'}
+];
+let meds=[{name:'Morning medicine',dose:'As prescribed · after breakfast',time:'8:30 AM',done:true},{name:'Afternoon reminder',dose:'As prescribed · after lunch',time:'1:30 PM',done:true},{name:'Evening medicine',dose:'As prescribed · after dinner',time:'8:00 PM',done:false}];
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));const titles={dashboard:'Good morning, Debopriya',appointments:'Appointments',medications:'Medication routine',visits:'Care visits',contacts:'People & contacts',privacy:'Privacy & access'};document.getElementById('heading').textContent=titles[id];}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function renderAppointments(){let q=(document.getElementById('apptSearch')?.value||'').toLowerCase();let rows=appointments.filter(a=>(a.name+a.place).toLowerCase().includes(q));document.getElementById('apptRows').innerHTML=rows.length?rows.map(a=>`<tr><td><strong>${esc(a.name)}</strong></td><td>${esc(a.date)}<br><span class="muted">${esc(a.time)}</span></td><td>${esc(a.place)}</td><td>${esc(a.transport)}</td><td><span class="tag ${a.status==='To arrange'?'orange':''}">${esc(a.status)}</span></td></tr>`).join(''):'<tr><td colspan="5" class="empty">No appointments match your search.</td></tr>';document.getElementById('statAppt').textContent=appointments.length;}
+function renderMeds(){let html=meds.map((m,i)=>`<div class="med"><div><b>${esc(m.name)}</b><span>${esc(m.time)} · ${esc(m.dose)}</span></div><button class="check ${m.done?'done':''}" onclick="toggleMed(${i})" aria-label="Toggle medication reminder">${m.done?'✓':'○'}</button></div>`).join('');document.getElementById('medRows').innerHTML=html;document.getElementById('dashMeds').innerHTML=html;document.getElementById('statMeds').textContent=meds.filter(m=>m.done).length+'/'+meds.length;}
+function renderDashAppts(){document.getElementById('dashAppointments').innerHTML=appointments.slice(0,3).map(a=>{let d=new Date(a.date+'T12:00:00');return `<div class="event"><div class="eventdate"><b>${d.getDate()}</b><span>${d.toLocaleDateString('en',{month:'short'})}</span></div><div class="eventinfo"><b>${esc(a.name)}</b><span>${esc(a.time)} · ${esc(a.place)}</span></div><span class="tag ${a.status==='To arrange'?'orange':''}">${esc(a.status)}</span></div>`}).join('');}
+function toggleMed(i){meds[i].done=!meds[i].done;renderMeds();toast(meds[i].done?'Reminder marked complete':'Reminder marked incomplete');}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+let mode='appointment';
+function openModal(type){mode=type;let titles={appointment:'Add an appointment',medication:'Add a medication reminder',visit:'Schedule a care visit'};document.getElementById('modalTitle').textContent=titles[type];let fields='';
+if(type==='appointment')fields=`<label>Appointment name<input name="name" required placeholder="e.g. Dentist follow-up"></label><label>Date<input name="date" type="date" required></label><label>Time<input name="time" required placeholder="e.g. 11:00 AM"></label><label>Clinic / location<input name="place" required placeholder="Clinic name and area"></label><label>Transport plan<select name="transport"><option>Family pickup</option><option>Cab required</option><option>Walking / nearby</option><option>To be arranged</option></select></label>`;
+if(type==='medication')fields=`<label>Reminder name<input name="name" required placeholder="Use the prescribed label"></label><label>Reminder time<input name="time" required placeholder="e.g. 8:00 PM"></label><label>Routine note<input name="dose" placeholder="e.g. after dinner (as prescribed)"></label>`;
+if(type==='visit')fields=`<label>Care professional<input name="name" required placeholder="Name"></label><label>Visit type<input name="kind" required placeholder="Home care / physiotherapy"></label><label>Date<input name="date" type="date" required></label><label>Time<input name="time" required placeholder="e.g. 4:00 PM"></label>`;
+document.getElementById('entryForm').innerHTML=fields+`<button class="btn" type="submit">Save to this demo</button>`;document.getElementById('modalback').classList.add('show');}
+function closeModal(){document.getElementById('modalback').classList.remove('show');}
+function saveEntry(e){e.preventDefault();let d=Object.fromEntries(new FormData(e.target));if(mode==='appointment'){appointments.push({...d,status:'To arrange'});renderAppointments();renderDashAppts();}else if(mode==='medication'){meds.push({...d,done:false});renderMeds();}else{toast('Visit saved in this prototype concept.');}closeModal();toast('Update added to this demo.');}
+let toastTimer;function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
+renderAppointments();renderMeds();renderDashAppts();
+</script>
+</body></html>
